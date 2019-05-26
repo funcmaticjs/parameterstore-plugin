@@ -13,7 +13,7 @@
     "url": "https://github.com/funcmaticjs/parameterstore-plugin.git"
   },
   "dependencies": {
-    "aws-param-store": "^2.1.0"
+    "aws-param-store": "^3.0.0"
   },
   "devDependencies": {
     "aws-sdk": "^2.400.0",
