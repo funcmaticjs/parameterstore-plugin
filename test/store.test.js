@@ -40,4 +40,13 @@ describe('Request', () => {
       "VARIABLE_B": "value.b"
     })
   })
+  it ('should also fetch from process.env', async () => {
+    process.env['FUNC_PARAMETERSTORE_PATH'] = "/External/ssmplugin/DEV"
+    let ctx = { env: { } }
+    await plugin.env(ctx, NOOP)
+    expect(ctx.env).toMatchObject({
+      "VARIABLE_A": "value.a",
+      "VARIABLE_B": "value.b"
+    })
+  })
 }) 
