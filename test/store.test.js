@@ -10,7 +10,7 @@ describe('Request', () => {
   })
   afterEach(async () => {
   })
-  it ('should throw error if FUNC_PARAMETERSTORE_PATH not set in ctx.env', async () => {
+  it ('should NOOP if FUNC_PARAMETERSTORE_PATH not set in ctx.env', async () => {
     let ctx = { env: { } }
     let error = null
     try {
@@ -18,8 +18,8 @@ describe('Request', () => {
     } catch (err) {
       error = err
     }
-    expect(error).toBeTruthy()
-    expect(error.message).toEqual("Environment variable 'FUNC_PARAMETERSTORE_PATH' has no value in ctx.env")
+    expect(error).toBeFalsy()
+    expect(ctx.env).toEqual({ })
   })
   it ('should throw error if path is invalid', async () => {
     let ctx = { env: { FUNC_PARAMETERSTORE_PATH: "/Invalid/Path" } }

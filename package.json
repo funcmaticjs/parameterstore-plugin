@@ -1,6 +1,6 @@
 {
   "name": "@funcmaticjs/parameterstore-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Funcmatic plugin that fetches environment variables from AWS Parameter Store and sets them in ctx.env",
   "main": "index.js",
   "scripts": {
